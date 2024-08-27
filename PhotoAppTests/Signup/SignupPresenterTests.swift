@@ -26,7 +26,7 @@ final class SignupPresenterTests: XCTestCase {
     func testSignupPresenter_WhenInformationProvided_WillValidateEachProperty() {
         //Arrange
         let signupFormModel = SignupFormModel(firstName: "Mahshad", lastName: "Jafari", email: "test@test.com", password: "123456789", repeatPassword:  "123456789")
-        
+        let mockSignupModelValidator = MockSignupModelValidator()
         let sut = SignupPresenter()
         
         
@@ -34,5 +34,7 @@ final class SignupPresenterTests: XCTestCase {
         sut.processUserSignup(formModel: signupFormModel)
         
         //Assert
+        
+        XCTAssertTrue(mockSignupModelValidator.isFirstNameValidated)
     }
 }
