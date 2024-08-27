@@ -25,6 +25,7 @@
 		49555BB92C771CFD00F613FF /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49555BB82C771CFD00F613FF /* MockURLProtocol.swift */; };
 		49AB12FF2C7E0CB2008F1C3D /* SignupPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB12FE2C7E0CB2008F1C3D /* SignupPresenterTests.swift */; };
 		49AB13012C7E0DE8008F1C3D /* SignupFormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB13002C7E0DE8008F1C3D /* SignupFormModel.swift */; };
+		49AB13032C7E101A008F1C3D /*  SignupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB13022C7E101A008F1C3D /*  SignupPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		49555BB82C771CFD00F613FF /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		49AB12FE2C7E0CB2008F1C3D /* SignupPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenterTests.swift; sourceTree = "<group>"; };
 		49AB13002C7E0DE8008F1C3D /* SignupFormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupFormModel.swift; sourceTree = "<group>"; };
+		49AB13022C7E101A008F1C3D /*  SignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " SignupPresenter.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				49555BB42C76090B00F613FF /* Controller */,
 				49555BB32C7608F200F613FF /* Network */,
 				49555BB22C76084000F613FF /* Model */,
+				49AB13022C7E101A008F1C3D /*  SignupPresenter.swift */,
 			);
 			path = Signup;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				49555B742C75B91F00F613FF /* ViewController.swift in Sources */,
 				49555BAE2C76070200F613FF /* SignupResponseModel.swift in Sources */,
 				49555B702C75B91F00F613FF /* AppDelegate.swift in Sources */,
+				49AB13032C7E101A008F1C3D /*  SignupPresenter.swift in Sources */,
 				49555BB02C76074F00F613FF /* SignupError.swift in Sources */,
 				49AB13012C7E0DE8008F1C3D /* SignupFormModel.swift in Sources */,
 				49555BAC2C76039400F613FF /* SignupFromRequestModel.swift in Sources */,

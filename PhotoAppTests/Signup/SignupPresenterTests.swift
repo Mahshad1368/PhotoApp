@@ -27,8 +27,11 @@ final class SignupPresenterTests: XCTestCase {
         //Arrange
         let signupFormModel = SignupFormModel(firstName: "Mahshad", lastName: "Jafari", email: "test@test.com", password: "123456789", repeatPassword:  "123456789")
         
-        //Act
+        let sut = SignupPresenter()
         
+        
+        //Act
+        sut.processUserSignup(formModel: signupFormModel)
         
         //Assert
     }
