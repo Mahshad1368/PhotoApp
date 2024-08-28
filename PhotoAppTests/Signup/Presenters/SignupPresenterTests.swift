@@ -39,8 +39,29 @@ final class SignupPresenterTests: XCTestCase {
         
         //Assert
         
-        XCTAssertTrue(mockSignupModelValidator.isFirstNameValidated)
-        XCTAssertTrue(mockSignupModelValidator.isPasswordValidated)
-        XCTAssertTrue(mockSignupModelValidator.doPasswordMatched)
+        XCTAssertTrue(mockSignupModelValidator.isFirstNameValidated, "Firs name was not validatet")
+        XCTAssertTrue(mockSignupModelValidator.isFirstNameValidated, "Last name was not validatet")
+        XCTAssertTrue(mockSignupModelValidator.isValidEmailformated, "Email format was not validated")
+        XCTAssertTrue(mockSignupModelValidator.isPasswordValidated, "Password was not validated")
+        XCTAssertTrue(mockSignupModelValidator.doPasswordMatched, "Did not validated if passwords match")
+    }
+    
+    
+    func testSignupPresenter_WhenGivenValidFormModel_ShouldCallSignupMethod() {
+        
+        let signupFormModel = SignupFormModel(firstName: "Mahshad", lastName: "Jafari", email: "test@test.com", password: "123456789", repeatPassword:  "123456789")
+        
+        let mockSignupModelValidator = MockSignupModelValidator()
+        let mockSignupWebService = MockSignupWebService()
+        
+        
+        //Act
+        let sut = SignupPresenter(formModelVAlidator: mockSignupModelValidator)
+        sut.processUserSignup(formModel: signupFormModel)
+        
+        
+        //Assert
+        
+        
     }
 }

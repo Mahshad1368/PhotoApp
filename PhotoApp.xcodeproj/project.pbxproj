@@ -139,8 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				49555BB72C771CD800F613FF /* Signup */,
-				49555BB62C76096700F613FF /* Models */,
-				49555BB52C76095600F613FF /* Network */,
 			);
 			path = PhotoAppTests;
 			sourceTree = "<group>";
@@ -156,10 +154,10 @@
 		49555BB12C76083500F613FF /* Signup */ = {
 			isa = PBXGroup;
 			children = (
+				49AB13082C7F29DC008F1C3D /* Presenters */,
 				49555BB42C76090B00F613FF /* Controller */,
 				49555BB32C7608F200F613FF /* Network */,
 				49555BB22C76084000F613FF /* Model */,
-				49AB13022C7E101A008F1C3D /*  SignupPresenter.swift */,
 			);
 			path = Signup;
 			sourceTree = "<group>";
@@ -212,11 +210,37 @@
 		49555BB72C771CD800F613FF /* Signup */ = {
 			isa = PBXGroup;
 			children = (
-				49AB13042C7E121E008F1C3D /* MockSignupModelValidator.swift */,
-				49555BB82C771CFD00F613FF /* MockURLProtocol.swift */,
-				49AB12FE2C7E0CB2008F1C3D /* SignupPresenterTests.swift */,
+				49AB13092C7F2A35008F1C3D /* Presenters */,
+				49555BB52C76095600F613FF /* Network */,
+				49555BB62C76096700F613FF /* Models */,
+				49AB130A2C7F2A4F008F1C3D /* Mocks */,
 			);
 			path = Signup;
+			sourceTree = "<group>";
+		};
+		49AB13082C7F29DC008F1C3D /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				49AB13022C7E101A008F1C3D /*  SignupPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		49AB13092C7F2A35008F1C3D /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				49AB12FE2C7E0CB2008F1C3D /* SignupPresenterTests.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		49AB130A2C7F2A4F008F1C3D /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				49555BB82C771CFD00F613FF /* MockURLProtocol.swift */,
+				49AB13042C7E121E008F1C3D /* MockSignupModelValidator.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

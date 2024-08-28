@@ -63,6 +63,47 @@ final class SignUpFormModelValidatorTest: XCTestCase {
         
         XCTAssertFalse(isFirstNameValid, "The isFirstNameValid() should have returned FALSE for a first name that is longer than \(SignUpConstsnts.firstNameMaxLength) charachters but it has returned TRUE")
     }
+   
+    func testSignFormModelValidator_WhenValidLastNameProvided_ShouldReturnTrue() {
+           
+           // Arrange
+           // Act
+           let isLastNameValid = sut.isLastNameValid(lastName: "Jafari")
+           
+           // Assert
+           XCTAssertTrue(isLastNameValid, "The isLastNameValid() should have returned TRUE for a valid last name but returned FALSE")
+       }
+    
+    func testSignFormModelValidator_WhenTooShortLastName_ShouldReturnesFalse() {
+        
+        let isLastNameValid = sut.isLastNameValid(lastName: "j")
+        
+        XCTAssertFalse(isLastNameValid, "The isLastNameValid() should have returned FALSE for a last name that is shorter than  characters but it has returned TRUE")
+        
+    }
+    
+    func testSignFormModelValidator_WhenTooLongtLastName_ShouldReturnesFalse() {
+        
+        let isLastNameValid = sut.isLastNameValid(lastName: "JafariJafari")
+        
+        XCTAssertFalse(isLastNameValid)
+        
+    }
+    
+    func testSignupFormModelValidator_WhenValidEmailProvided_ShouldReturnTrue() {
+        
+        let isValidEmailFormat = sut.isValidEmailformat(email: "test@test.com")
+        
+        XCTAssert(isValidEmailFormat)
+    }
+    
+    func testSignupFormModelValidator_WhenInvalidEmailProvided_ShouldReturnFalse() {
+        
+        let isVlidEmailFormat = sut.isValidEmailformat(email: "test@test")
+        
+        XCTAssertFalse(isVlidEmailFormat)
+    }
+    
     func testSignUpFormModelValidator_WhenPasswordProvided_ShouldReturnTrue() {
         
         let isPasswordValid = sut.isPasswordValid(password: "123456789")
