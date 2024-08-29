@@ -61,7 +61,7 @@ final class SignupPresenterTests: XCTestCase {
         
         
         //Assert
-        
+        XCTAssertTrue(mockSignupWebService.isSignupMethodCalled, "The signup() method was not called in the SignupWebService class")
         
     }
 }
