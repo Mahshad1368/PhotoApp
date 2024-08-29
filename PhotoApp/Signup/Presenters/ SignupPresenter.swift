@@ -12,14 +12,32 @@ class  SignupPresenter {
     
     private var formModelVAlidator: SignupModelValidatorProtocol
     
-    init(formModelVAlidator: SignupModelValidatorProtocol){
+    private var webService: SignupWebServiceProtocol
+    
+    
+    
+    init(formModelVAlidator: SignupModelValidatorProtocol, webService: SignupWebServiceProtocol){
         self.formModelVAlidator = formModelVAlidator
+        self.webService = webService
     }
+    
+    
     func processUserSignup(formModel: SignupFormModel) {
         if !formModelVAlidator.isFerstNameValid(firstName: formModel.firstName) {
             
             return
         }
+        
+        if !formModelVAlidator.isLastNameValid(lastName: formModel.lastName){
+            
+            return
+        }
+        
+        if !formModelVAlidator.isValidEmailformat(email: formModel.email) {
+             return
+        }
+        
+        
         if !(formModelVAlidator.isPasswordValid(password: formModel.password)) {
             
             return
@@ -29,5 +47,10 @@ class  SignupPresenter {
             return
         }
         
+        let requestModel = SignupFromRequestModel(firstName: formModel.firstName, lastName: formModel.lastName, email: formModel.email, password: formModel.password)
+        
+        webService.signup(withForm: requestModel) { (requestModel, error) in
+            // TODO
+        }
     }
 }
